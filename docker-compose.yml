@@ -1,6 +1,11 @@
 version: '3.1'
 
 services:
+    redis_basic:
+        container_name: redis_basic
+        image: redis:6-alpine
+        ports:
+          - 6379:6379
     flowise:
         image: flowiseai/flowise
         restart: always
